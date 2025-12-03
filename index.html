@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad khal store </title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Tajawal", sans-serif;
+            background: #0a0c1f;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* هيدر هندسي فخم بالأزرق */
+        header {
+            background: linear-gradient(135deg, #0047ff, #00d4ff);
+            padding: 35px 10px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 900;
+            border-radius: 0 0 28px 28px;
+            position: relative;
+        }
+
+        /* أشكال هندسية داخل الهيدر */
+        header::before, header::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: #ffffff15;
+            backdrop-filter: blur(4px);
+            transform: rotate(45deg);
+            border-radius: 16px;
+            z-index: 0;
+        }
+
+        header::before { top: -50px; left: -40px; }
+        header::after { bottom: -60px; right: -30px; }
+
+        /* حاوية المحتوى */
+        .container {
+            width: 92%;
+            margin: 20px auto;
+        }
+
+        /* بطاقة هندسية فخمة */
+        .game-card {
+            background: #10142a;
+            padding: 18px;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            border: 1px solid #ffffff10;
+            position: relative;
+            overflow: hidden;
+            transition: 0.25s;
+        }
+
+        /* تأثير الضغط */
+        .game-card:active {
+            transform: scale(0.96);
+        }
+
+        /* هندسة داخل البطاقة */
+        .game-card::before {
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, #0047ff20, #00d4ff20);
+            transform: rotate(45deg);
+            top: -50px;
+            right: -50px;
+            border-radius: 20px;
+        }
+
+        .game-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .price {
+            display: block;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            background: #1a1d36;
+            border-right: 5px solid #0047ff;
+            border-radius: 12px;
+            transition: .25s;
+        }
+
+        /* حركة عند الضغط */
+        .price:active {
+            transform: scale(0.94);
+        }
+
+        /* زر واتساب فاخر */
+        .whatsapp-btn {
+            width: 92%;
+            margin: 30px auto;
+            display: block;
+            padding: 16px;
+            background: linear-gradient(135deg, #00d456, #008c3f);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            color: #fff;
+            font-size: 19px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .whatsapp-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* خلفية هندسية متحركة */
+        .floating-shape {
+            position: fixed;
+            width: 160px;
+            height: 160px;
+            background: #0047ff15;
+            transform: rotate(45deg);
+            border-radius: 18px;
+            animation: float 6s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        .s1 { top: 10%; left: -60px; }
+        .s2 { bottom: 15%; right: -60px; animation-delay: 1.5s; }
+        .s3 { top: 50%; right: -80px; animation-delay: 3s; }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(45deg); }
+            50% { transform: translateY(-22px) rotate(55deg); }
+            100% { transform: translateY(0) rotate(45deg); }
+        }
+
+        @media (max-width: 600px) {
+            header { font-size: 24px; }
+            .game-title { font-size: 18px; }
+            .price { font-size: 15px; padding: 8px 10px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- أشكال هندسية متحركة -->
+    <div class="floating-shape s1"></div>
+    <div class="floating-shape s2"></div>
+    <div class="floating-shape s3"></div>
+ 
+    <header>Ahmad khaled</header>
+
+    <div class="container">
+
+        <div class="game-card">
+            <div class="game-title">Free Fire – فري فاير</div>
+            <span class="price">100 جوهرة = 1.00 دينار</span>
+            <span class="price">530 جوهرة = 3.70 دينار</span>
+            <span class="price">1060 جوهرة = 7.0 دينار</span>
+        </div>
+
+        <div class="game-card">
+            <div class="game-title">PUBG – ببجي</div>
+            <span class="price">60 ببجي = 1.00 دينار</span>
+            <span class="price">325 ببجي = 3.70 دينار</span>
+            <span class="price">660 ببجي = 7.0 دينار</span>
+        </div>
+
+        <div class="game-card">
+            <div class="game-title">clash Royale – كلاش رويال</div>
+            <span class="price">1200 كلاش رويال = 8.0 دينار</span>
+            <span class="price">2500 كلاش رويال = 15.70 دينار</span>
+        </div>
+
+        <div class="game-card">
+            <div class="game-title">jawaker - جواكر</div>
+            <span class="price">مسرع احمر جواكر = 1.70 دينار</span>
+            <span class="price">مسرع ازرق جواكر = 6.70 دينار</span>
+            <span class="price">مسرع اسود جواكر = 11.0 دينار</span>
+        </div>
+
+    </div>
+
+    <a class="whatsapp-btn" href="https://wa.me/962780547443" target="_blank">
+        تواصل عبر واتساب
+    </a>
+
+</body>
+</html>
